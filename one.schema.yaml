@@ -1,0 +1,48 @@
+# схема базы данных бота для telegram’а,
+# реализующего комментирование сообщений канала в группе с топиками.
+# cc-by-sa 4.0 © зажигин богдан, 2023
+
+
+
+title: "Группы и их список обсулижваемых/необслуживаемых каналов"
+
+type: array
+minItems: 1
+uniqueItems: true
+
+items:
+	title: "Каналы привязанные к группе с топиками"
+	type: object
+	required:
+		- group_id
+		- whitelist
+	properties:
+		group_id:
+			title: "Идентификатор группы"
+			description: "Согласно строке «id» из core.telegram.org/bots/api#chat."
+			type: integer
+		whitelist:
+			type: array
+			minItems: 1
+			items:
+				type: object
+				required:
+					- channel_id
+				dependentRequired:
+					active:
+						- channel_id
+				properties:
+					channel_id:
+						title: "Идентификатор канала"
+						description: "Согласно строке «id» из core.telegram.org/bots/api#chat."
+						type: integer
+						examples:
+							- 1001973121320
+							- 1001523889521
+					active:
+						title: "Обслуживание"
+						description: "Каналы сначала добавляются к группе, как возможные для привязки к топику, и только потом могут быть активированы."
+						type: boolean
+						examples:
+							- true
+							- false

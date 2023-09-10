@@ -1,0 +1,5 @@
+= Спецификация бота для Telegram’а, реализующего комментирование сообщений канала в группе с топиками
+
+Спецификация поведения описана в link:one.feature[`one.feature`] на Gherkin’е, а схемы базы данных в link:one.schema.yaml[`one.schema.yaml`] на JSON Schem’е в формате YAML. Перевести его в JSON формат можно на сайте https://www.json2yaml.com/convert-yaml-to-json[json2yaml.com].
+
+Разработка программ согласно концепциям разрешено исключительно c указанием авторства «Зажигина Богдана Алексеевича» согласно тексту лицензции https://creativecommons.org/licenses/by/4.0/legalcode.ru[creativecommons.org/licenses/by/4.0/legalcode.ru], если не указано другое.
