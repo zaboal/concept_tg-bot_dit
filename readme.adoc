@@ -1,4 +1,4 @@
-= Cпецификация бота для telegram’а, реализующего комментирование сообщений канала в группе с топиками
+= Cпецификация бота для Telegram’а, реализующего комментирование сообщений канала в группе с топиками
 
 Поведение описал в link:one.feature[`one.feature`] на Gherkin’е, а схему базы данных в link:one.schema.yaml[`one.schema.yaml`] на JSON Schem’е в формате YAML. Перевести его в JSON формат можно на сайте https://www.json2yaml.com/convert-yaml-to-json[json2yaml.com].
 
